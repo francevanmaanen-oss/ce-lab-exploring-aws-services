@@ -10,28 +10,28 @@
 ### Part A: Service Discovery
 
 **EC2 (Compute):**
-- Purpose: [Your answer]
+- Purpose: [It provides scalable virtual servers. The most common uses are for hosting applications, development and testing, batch processing, high performance computing and gaming.]
 - Screenshot: ![EC2 Dashboard](screenshots/console-navigation/ec2-dashboard.png)
 
 **S3 (Storage):**
-- Purpose: [Your answer]
+- Purpose: [it is a storage service used to store and retrieve any amiunt of data from anywhere on the web.]
 - Screenshot: ![S3 Dashboard](screenshots/console-navigation/s3-dashboard.png)
 
 **RDS (Database):**
-- Purpose: [Your answer]
+- Purpose: [It is a managed service used to set up, operate, and scale relational databases in the cloud.]
 - Screenshot: ![RDS Dashboard](screenshots/console-navigation/rds-dashboard.png)
 
 **VPC (Networking):**
-- Purpose: [Your answer]
+- Purpose: [It is used to provision a logically isolated section of the AWS Cloud.]
 - Screenshot: ![VPC Dashboard](screenshots/console-navigation/vpc-dashboard.png)
 
 **IAM (Security):**
-- Purpose: [Your answer]
+- Purpose: [It is used to manage user roles and who can access AWS resources.]
 - Screenshot: ![IAM Dashboard](screenshots/console-navigation/iam-dashboard.png)
 
 ### Part B: Console Features
 
-**Lambda Category:** [Which category?]
+**Lambda Category:** [Compute]
 
 **Pinned Services:**
 ![S3 Pinned](screenshots/console-navigation/s3-pinned.png)
@@ -41,9 +41,9 @@
 
 **Region Selector:**
 ![Region Changed](screenshots/console-navigation/region-selector.png)
-- Original region: [region]
-- Changed to: [region]
-- Changed back: [Yes/No]
+- Original region: [us-east-1]
+- Changed to: [us-east-2]
+- Changed back: [Yes]
 
 ---
 
