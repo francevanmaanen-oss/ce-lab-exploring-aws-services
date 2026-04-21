@@ -53,42 +53,42 @@
 
 | Category | Services | Primary Use Case |
 |----------|----------|------------------|
-| Compute | [List 3-5 services] | [Use cases] |
-| Storage | [List 3-5 services] | [Use cases] |
-| Database | [List 3-5 services] | [Use cases] |
-| Networking | [List 3-5 services] | [Use cases] |
-| Security | [List 3-5 services] | [Use cases] |
-| Management | [List 3-5 services] | [Use cases] |
+| Compute | [EC2, Lambda, Elastic Beanstalk, Fargate, lightsail, batch] | [Running applications, virtual servers, large-scale batch jobs, running serverless containers] |
+| Storage | [S3, EBS, EFS, Storage Gateway, Snowball]| [Hybrid cloud storage, physical data migration, centralized backup management] |
+| Database | [RDS, DynamoDB, ElastiCache, Redshift, Neptune] | [Managing data, Data warehousing] |
+| Networking | [VPC, CloudFront, Route 53, Direct Connect, global Accelerator] | [Connecting resources, private connection, optimizing global performance, ] |
+| Security | [IAM, KMS, CloudTrail, WAF, Secrets manager] | [Securing resources, filtering web traffic, rotating app credentials] |
+| Management | [CloudWatch, CloudFormation, Systems Manager, Organizations, Trusted Advisor] | [Monitoring & automation, managing multiple accounts, optimizing best practices] |
 
 ### Research Question Answers:
 
 **1. What's the difference between EC2 and Lambda?**
 
-[Your answer]
+[EC2 is a virtual server (IaaS) and Lambda is a code execution service (PaaS)]
 
 ---
 
 **2. When would you use S3 vs EBS?**
 
-[Your answer]
+[S3 stores files such as videos, photos, logs, etc. while EBS is more for operating sustems and databases.]
 
 ---
 
 **3. What's the difference between RDS and DynamoDB?**
 
-[Your answer]
+[The data structure. For example RDS data are connected to each other on the other hand DynamoDB is data are non-relational.]
 
 ---
 
 **4. Why do you need a VPC?**
 
-[Your answer]
+[To create a private and secure isolation for cloud resources. Privacy from the world of my database and allows to connect office network to AWS securely.]
 
 ---
 
 **5. What does CloudWatch monitor?**
 
-[Your answer]
+[The performance and health of my resources and applications.]
 
 ---
 
@@ -96,12 +96,16 @@
 
 ### CLI Version:
 ```
-[Paste output of: aws --version]
+[aws-cli/2.34.4 Python/3.13.12 Darwin/24.6.0 source/x86_64]
 ```
 
 ### Configuration:
 ```
-[Paste output of: aws configure list]
+[NAME       : VALUE                    : TYPE             : LOCATION
+profile    : <not set>                : None             : None
+access_key : ****************YAW3     : shared-credentials-file : 
+secret_key : ****************+wW6     : shared-credentials-file : 
+region     : us-east-1                : config-file      : ~/.aws/config]
 ```
 
 ### CLI Outputs:
