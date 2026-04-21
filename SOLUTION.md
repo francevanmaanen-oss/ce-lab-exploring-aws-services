@@ -1,7 +1,7 @@
 # Exploring AWS Services Lab - Solution
 
-**Student Name:** [Your Name]  
-**Date Completed:** [Date]
+**Student Name:** France
+**Date Completed:** 21 April 2026
 
 ---
 
@@ -113,9 +113,9 @@ region     : us-east-1                : config-file      : ~/.aws/config]
 See attached `cli-outputs.txt` file for all command outputs.
 
 **Key findings:**
-- My AWS Account ID: [account-id]
-- Default region: [region]
-- Number of regions available: [number]
+- My AWS Account ID: 845587649055
+- Default region: us-east-1
+- Number of regions available: 17
 
 ---
 
@@ -124,96 +124,100 @@ See attached `cli-outputs.txt` file for all command outputs.
 ### Pricing Worksheet:
 
 **1. EC2 t3.micro (Linux, us-east-1):**
-- On-Demand: $______ per hour
-- Monthly (730 hours): $______
-- Free Tier eligible: [Yes/No]
-- Free Tier details: [hours/month free]
+- On-Demand: $0.0104 per hour
+- Monthly (730 hours): $1.04
+- Free Tier eligible: Yes
+- Free Tier details: 750 hours/month 12 months
 
 **2. S3 Standard Storage:**
-- 100 GB monthly cost: $______
-- Free Tier: First ___ GB free for 12 months
-- Cost per GB: $______
+- 100 GB monthly cost: $2.30
+- Free Tier: First 5 GB free for 12 months
+- Cost per GB: $0.023
 
 **3. RDS db.t3.micro (MySQL):**
-- Monthly cost: $______
-- Storage (20 GB): $______
-- Total: $______
-- Free Tier eligible: [Yes/No]
+- Monthly cost: $12.41
+- Storage (20 GB): $2.30
+- Total: $14.71
+- Free Tier eligible: Yes
 
 **4. Data Transfer OUT:**
-- 100 GB cost: $______
-- First ___ GB free per month
+- 100 GB cost: $0
+- First 100 GB free per month
 
 ### AWS Pricing Calculator Estimate:
 
 ![Pricing Calculator](screenshots/pricing-calculator.png)
 
-**Estimate Link:** [Paste your estimate link here]
+**Estimate Link:** [[Paste your estimate link here]](https://calculator.aws/#/createCalculator/DataTransfer)
 
-**Total Estimated Monthly Cost:** $______
+**Total Estimated Monthly Cost:** $0
 
 ---
 
 ## Exercise 5: Documentation Hunt
 
 ### EC2 Instance Types:
-- Documentation URL: [URL]
-- t3.medium vCPUs: ______
-- t3.medium memory: ______ GB
+- Documentation URL: https://aws.amazon.com/ec2/instance-types/
+- t3.medium vCPUs: 2
+- t3.medium memory: 4 GB
 
 ### S3 Storage Classes:
-- Documentation URL: [URL]
+- Documentation URL: [[URL]](https://aws.amazon.com/s3/storage-classes/)
 - All storage classes:
-  1. [Class name]
-  2. [Class name]
-  3. [Class name]
-  4. [Etc...]
-- Cheapest for archive: [Class name]
+  1. S3 Standard
+  2. S3 Intelligent-Tiering
+  3. S3 Standard-Infrequent Access
+  4. S3 One Zone-Infrequent Access
+  5. S3 Glacier Instant Retrieval
+  6. S3 Glacier Flexible Retrieval
+  7. S3 Glacier Deep Archive
+  8. S3 Express One Zone
+- Cheapest for archive: S3 Glacier Deep Archive
 
 ### IAM Best Practices:
-- Documentation URL: [URL]
+- Documentation URL: [[URL]](https://aws.amazon.com/iam/resources/best-practices/)
 - Three best practices:
-  1. [Practice]
-  2. [Practice]
-  3. [Practice]
+  1. Grant Least Privilege
+  2. Enable MFA
+  3. Use Roles instead of IAM Users
 
 ### Free Tier Limits:
-- Documentation URL: [URL]
-- EC2 t2.micro hours/month: ______
-- S3 storage free: ______ GB
+- Documentation URL: [[URL]](https://aws.amazon.com/free/)
+- EC2 t2.micro hours/month: 750 hours
+- S3 storage free: 5 GB
 
 ---
 
 ## Exercise 6: Regions and Availability Zones
 
 ### Your Current Region:
-- Region Name: [e.g., US East (N. Virginia)]
-- Region Code: [e.g., us-east-1]
-- Number of AZs: ______
+- Region Name: US East (N. Virginia)]
+- Region Code: us-east-1]
+- Number of AZs: 6
 
 ### Concept Questions:
 
 **What is the difference between a Region and an Availability Zone?**
 
-[Your answer]
+A Region is a physical geographic area in the world (like "Ireland" or "Oregon"). An Availability Zone (AZ) is a discrete, isolated data center (or cluster of them) inside that region
 
 ---
 
 **Why does AWS have multiple regions?**
 
-[Your answer]
+Data sovereignity, disaster recovery and putting servers close to users
 
 ---
 
 **How many Availability Zones does each region typically have?**
 
-[Your answer]
+The standard is 3 Availability Zones per region, though older/larger regions like us-east-1 have more.
 
 ---
 
 **Can you deploy resources in multiple regions simultaneously?**
 
-[Your answer]
+Yes. You can use tools like Route 53 (DNS) or S3 Cross-Region Replication to run your application across multiple regions at the same time for maximum reliability.
 
 ---
 
@@ -221,11 +225,11 @@ See attached `cli-outputs.txt` file for all command outputs.
 
 | Scenario | Best Region | Reasoning |
 |----------|-------------|-----------|
-| Serving users primarily in Europe | [region] | [Your reasoning] |
-| Lowest cost for non-critical workloads | [region] | [Your reasoning] |
-| GDPR compliance required | [region] | [Your reasoning] |
-| Serving users in Asia-Pacific | [region] | [Your reasoning] |
-| Need newest AWS services | [region] | [Your reasoning] |
+| Serving users primarily in Europe | eu-central-1 (Frankfurt) or eu-west-1 (Ireland) | Reduces latency (the time it takes for data to travel) for your European users. |
+| Lowest cost for non-critical workloads | [us-east-1 (N. Virginia) or us-west-2 (Oregon) | These are historically the cheapest regions because they are the oldest and largest. |
+| GDPR compliance required | Any EU Region (e.g., eu-west-3 Paris) | Ensures data stays within EU borders to meet strict privacy laws. |
+| Serving users in Asia-Pacific | ap-southeast-1 (Singapore) or ap-northeast-1 (Tokyo)| Best for providing a fast experience to users in the APAC region. |
+| Need newest AWS services | us-east-1 (N. Virginia) | AWS almost always launches new features and services in this region first before rolling them out globally.|
 
 ---
 
@@ -266,19 +270,19 @@ See attached `cli-outputs.txt` file for all command outputs.
 
 **What surprised you most about AWS services?**
 
-[Your answer]
+The amount of things a user could do with a free tier account. 
 
 ---
 
 **Which AWS service are you most excited to learn about?**
 
-[Your answer]
+Probably EC2 and S3 as it is used so frequently. 
 
 ---
 
 **How comfortable do you feel navigating the AWS Console now?**
 
-[Your answer: Scale 1-10 and why]
+In a scale of 1 to 10, a 5. Im still in the phase of trying to get used to the interface. 
 
 ---
 
@@ -296,5 +300,5 @@ See attached `cli-outputs.txt` file for all command outputs.
 
 ---
 
-**Completed By:** [Your Name]  
-**Date:** [Date]
+**Completed By:** France
+**Date:** 21 April 2026
