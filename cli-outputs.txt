@@ -105,7 +105,31 @@ $ aws s3 ls
 ```
 $ aws ec2 describe-instance-types --query 'InstanceTypes[?contains(InstanceType, `t2`) || contains(InstanceType, `t3`)].InstanceType' --output table
 
-[Paste your output here]
+[-----------------------
+|DescribeInstanceTypes|
++---------------------+
+|  t2.2xlarge         |
+|  t3a.2xlarge        |
+|  t3.2xlarge         |
+|  t3.xlarge          |
+|  t3a.small          |
+|  t3a.medium         |
+|  t2.large           |
+|  t3.medium          |
+|  t3.large           |
+|  t2.micro           |
+|  t3.nano            |
+|  t3.micro           |
+|  t3a.large          |
+|  t2.medium          |
+|  t2.xlarge          |
+|  t2.nano            |
+|  t3.small           |
+|  t2.small           |
+|  t3a.nano           |
+|  t3a.xlarge         |
+|  t3a.micro          |
++---------------------+]
 ```
 
 ---
@@ -114,7 +138,43 @@ $ aws ec2 describe-instance-types --query 'InstanceTypes[?contains(InstanceType,
 ```
 $ aws iam get-account-summary
 
-[Paste your output here]
+[{
+    "SummaryMap": {
+        "GroupPolicySizeQuota": 5120,
+        "InstanceProfilesQuota": 1000,
+        "Policies": 0,
+        "GroupsPerUserQuota": 10,
+        "InstanceProfiles": 0,
+        "AttachedPoliciesPerUserQuota": 10,
+        "Users": 1,
+        "PoliciesQuota": 1500,
+        "Providers": 0,
+        "AccountMFAEnabled": 1,
+        "AccessKeysPerUserQuota": 2,
+        "AssumeRolePolicySizeQuota": 2048,
+        "PolicyVersionsInUseQuota": 10000,
+        "GlobalEndpointTokenVersion": 1,
+        "VersionsPerPolicyQuota": 5,
+        "AttachedPoliciesPerGroupQuota": 10,
+        "PolicySizeQuota": 6144,
+        "Groups": 0,
+        "AccountSigningCertificatesPresent": 0,
+        "UsersQuota": 5000,
+        "ServerCertificatesQuota": 20,
+        "MFADevices": 2,
+        "UserPolicySizeQuota": 2048,
+        "PolicyVersionsInUse": 3,
+        "ServerCertificates": 0,
+        "Roles": 3,
+        "RolesQuota": 1000,
+        "SigningCertificatesPerUserQuota": 2,
+        "MFADevicesInUse": 2,
+        "RolePolicySizeQuota": 10240,
+        "AttachedPoliciesPerRoleQuota": 10,
+        "AccountAccessKeysPresent": 1,
+        "AccountPasswordPresent": 1,
+        "GroupsQuota": 300
+    }]
 ```
 
 ---
