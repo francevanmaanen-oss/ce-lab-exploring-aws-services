@@ -10,23 +10,23 @@
 ### Part A: Service Discovery
 
 **EC2 (Compute):**
-- Purpose: [It provides scalable virtual servers. The most common uses are for hosting applications, development and testing, batch processing, high performance computing and gaming.]
+- Purpose: It provides scalable virtual servers. The most common uses are for hosting applications, development and testing, batch processing, high performance computing and gaming.
 - Screenshot: ![EC2 Dashboard](screenshots/console-navigation/ec2-dashboard.png)
 
 **S3 (Storage):**
-- Purpose: [it is a storage service used to store and retrieve any amiunt of data from anywhere on the web.]
+- Purpose: It is a storage service used to store and retrieve any amount of data from anywhere on the web.
 - Screenshot: ![S3 Dashboard](screenshots/console-navigation/s3-dashboard.png)
 
 **RDS (Database):**
-- Purpose: [It is a managed service used to set up, operate, and scale relational databases in the cloud.]
+- Purpose: It is a managed service used to set up, operate, and scale relational databases in the cloud. For example, with UberEats, RDS would be used for payment transactions, user details and order transactions. 
 - Screenshot: ![RDS Dashboard](screenshots/console-navigation/rds-dashboard.png)
 
 **VPC (Networking):**
-- Purpose: [It is used to provision a logically isolated section of the AWS Cloud.]
+- Purpose: It is used to provision a logically isolated section of the AWS Cloud. In layman terms, it is used to create and enhance environment where all processes are working. 
 - Screenshot: ![VPC Dashboard](screenshots/console-navigation/vpc-dashboard.png)
 
 **IAM (Security):**
-- Purpose: [It is used to manage user roles and who can access AWS resources.]
+- Purpose: It is used to manage user roles and who can access AWS resources.
 - Screenshot: ![IAM Dashboard](screenshots/console-navigation/iam-dashboard.png)
 
 ### Part B: Console Features
@@ -53,42 +53,42 @@
 
 | Category | Services | Primary Use Case |
 |----------|----------|------------------|
-| Compute | [EC2, Lambda, Elastic Beanstalk, Fargate, lightsail, batch] | [Running applications, virtual servers, large-scale batch jobs, running serverless containers] |
-| Storage | [S3, EBS, EFS, Storage Gateway, Snowball]| [Hybrid cloud storage, physical data migration, centralized backup management] |
-| Database | [RDS, DynamoDB, ElastiCache, Redshift, Neptune] | [Managing data, Data warehousing] |
-| Networking | [VPC, CloudFront, Route 53, Direct Connect, global Accelerator] | [Connecting resources, private connection, optimizing global performance, ] |
-| Security | [IAM, KMS, CloudTrail, WAF, Secrets manager] | [Securing resources, filtering web traffic, rotating app credentials] |
-| Management | [CloudWatch, CloudFormation, Systems Manager, Organizations, Trusted Advisor] | [Monitoring & automation, managing multiple accounts, optimizing best practices] |
+| Compute | [EC2, Lambda, Elastic Beanstalk, Fargate, lightsail, batch] | Running applications, virtual servers, large-scale batch jobs, running serverless containers |
+| Storage | S3, EBS, EFS, Storage Gateway, Snowball| [Hybrid cloud storage, physical data migration, centralized backup management] |
+| Database | RDS, DynamoDB, ElastiCache, Redshift, Neptune | Managing data, Data warehousing |
+| Networking | VPC, CloudFront, Route 53, Direct Connect, global Accelerator | Connecting resources, private connection, optimizing global performance |
+| Security | IAM, KMS, CloudTrail, WAF, Secrets manager | Securing resources, filtering web traffic, rotating app credentials |
+| Management | CloudWatch, CloudFormation, Systems Manager, Organizations, Trusted Advisor | Monitoring & automation, managing multiple accounts, optimizing best practices |
 
 ### Research Question Answers:
 
 **1. What's the difference between EC2 and Lambda?**
 
-[EC2 is a virtual server (IaaS) and Lambda is a code execution service (PaaS)]
+EC2 is a virtual server (IaaS) and Lambda is a code execution service (PaaS). In a general sense, Lambda can be used for static websites but to have a website that would interact with users that have queries, EC2 would be the best to use. 
 
 ---
 
 **2. When would you use S3 vs EBS?**
 
-[S3 stores files such as videos, photos, logs, etc. while EBS is more for operating sustems and databases.]
+S3 stores files such as videos, photos, logs, etc. while EBS is more for operating systems and databases. we can think of EBS as an external hard drive and S3 is a google drive. In S3, html files can be stored and in EBS, larger and workable data can be stored to be run in the server. 
 
 ---
 
 **3. What's the difference between RDS and DynamoDB?**
 
-[The data structure. For example RDS data are connected to each other on the other hand DynamoDB is data are non-relational.]
+The data structure. For example RDS data are connected to each other on the other hand DynamoDB is data are non-relational. Using the Ubereats example, we can use RDS for transactions and DynamoDB for contents of a cart or location of the driver. 
 
 ---
 
 **4. Why do you need a VPC?**
 
-[To create a private and secure isolation for cloud resources. Privacy from the world of my database and allows to connect office network to AWS securely.]
+To create a private and secure isolation for cloud resources. Privacy from the world of my database and allows to connect office network to AWS securely. With VPC, it controls who comes in and not to access resources. 
 
 ---
 
 **5. What does CloudWatch monitor?**
 
-[The performance and health of my resources and applications.]
+It is monitors AWS used. It collects and tracks metrics, logs and events. It could be efficient to use for billing management and health metrics of a particular process.  
 
 ---
 
@@ -125,13 +125,13 @@ See attached `cli-outputs.txt` file for all command outputs.
 
 **1. EC2 t3.micro (Linux, us-east-1):**
 - On-Demand: $0.0104 per hour
-- Monthly (730 hours): $1.04
+- Monthly (730 hours): $7.59 per month
 - Free Tier eligible: Yes
 - Free Tier details: 750 hours/month 12 months
 
 **2. S3 Standard Storage:**
 - 100 GB monthly cost: $2.30
-- Free Tier: First 5 GB free for 12 months
+- Free Tier: First 5 GB of Standard storage free for 12 months
 - Cost per GB: $0.023
 
 **3. RDS db.t3.micro (MySQL):**
@@ -148,9 +148,9 @@ See attached `cli-outputs.txt` file for all command outputs.
 
 ![Pricing Calculator](screenshots/pricing-calculator.png)
 
-**Estimate Link:** [[Paste your estimate link here]](https://calculator.aws/#/createCalculator/DataTransfer)
+**Estimate Link:** https://calculator.aws/#/estimate?id=8839ef68fc70868e12d8076065e2d9b0281fb06e
 
-**Total Estimated Monthly Cost:** $0
+**Total Estimated Monthly Cost:** $97.86
 
 ---
 
@@ -191,8 +191,8 @@ See attached `cli-outputs.txt` file for all command outputs.
 ## Exercise 6: Regions and Availability Zones
 
 ### Your Current Region:
-- Region Name: US East (N. Virginia)]
-- Region Code: us-east-1]
+- Region Name: US East (N. Virginia)
+- Region Code: us-east-1
 - Number of AZs: 6
 
 ### Concept Questions:
